@@ -1,0 +1,148 @@
+:root {
+    --dark-color: #2A2A2A;
+    --light-color: #F4F4F4;
+/*
+    Everything is fully scalable, so free to change the variable '--button-size' in order to scale buttons, using absolute and relative units ^-^  
+*/
+    --button-size: 100px;
+    --button-color: hsl(0, 5%, 9%);
+    --default-color: hsl(0, 0%, 50%);
+    --default-transparent-color: hsla(0, 0%, 85%, .9);
+
+    --icon-color: hsl(0, 0%, 55%);
+/*
+    Colors bellow can be used by adding one of the following class names, to the nav item:
+    - red,
+    - orange,
+    - yellow,
+    - green,
+    - light-blue,
+    - blue,
+    - purple,
+    - pink
+    Using other color names (or not using any of them) will result in applying the default color set which is based on the white color 
+*/
+    --red-color: hsl(0, 100%, 40%);
+    --red-transparent-color: hsla(0, 100%, 65%, .7);
+
+    --orange-color: hsl(40, 100%, 40%);
+    --orange-transparent-color: hsla(40, 100%, 65%, .7);
+
+    --yellow-color: hsl(60, 100%, 40%);
+    --yellow-transparent-color: hsla(60, 100%, 65%, .7);
+
+    --green-color: hsl(105, 100%, 40%);
+    --green-transparent-color: hsla(105, 100%, 65%, .7);
+
+    --light-blue-color: hsl(180, 100%, 40%);
+    --light-blue-transparent-color: hsla(180, 100%, 65%, .7);
+
+    --blue-color: hsl(215, 100%, 40%);
+    --blue-transparent-color: hsla(215, 100%, 65%, .7);
+    
+    --purple-color: hsl(270, 100%, 40%);
+    --purple-transparent-color: hsla(270, 100%, 65%, .7);
+    
+    --pink-color: hsl(295, 100%, 40%);
+    --pink-transparent-color: hsla(295, 100%, 65%, .7);
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: var(--dark-color);
+}
+.align-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.button-container {
+    display: flex;
+    width: calc(var(--button-size) * 5.6);
+    height: calc(var(--button-size) * 2.9);
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.button-container .button-row {
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.button-row .nav-button {
+    position: relative;
+    display: inline-block;
+    width: var(--button-size);
+    height: var(--button-size);
+    border-radius: 50%;
+    background-color: var(--button-color);
+    cursor: pointer;
+    box-shadow: 0 0 0 0 var(--default-color);
+    transition: all 350ms ease-out;
+}
+.button-row .nav-button:hover {
+    box-shadow: 0 0 calc(var(--button-size) * .2) calc(var(--button-size) * .1) var(--default-color);
+}
+.button-row .nav-button i {
+    font-size: calc(var(--button-size) * .6);
+    color: var(--icon-color);
+    transition: all 450ms ease-out;
+}
+.button-row .nav-button:hover i {
+    color: var(--default-transparent-color);
+}
+/* 
+    Color adjustement section
+*/
+.button-row .nav-button.red:hover {
+    box-shadow: 0 0 calc(var(--button-size) * .2) calc(var(--button-size) * .1) var(--red-color);
+}
+.button-row .nav-button.red:hover i {
+    color: var(--red-transparent-color);
+}
+.button-row .nav-button.orange:hover {
+    box-shadow: 0 0 calc(var(--button-size) * .2) calc(var(--button-size) * .1) var(--orange-color);
+}
+.button-row .nav-button.orange:hover i {
+    color: var(--orange-transparent-color);
+}
+.button-row .nav-button.yellow:hover {
+    box-shadow: 0 0 calc(var(--button-size) * .2) calc(var(--button-size) * .1) var(--yellow-color);
+}
+.button-row .nav-button.yellow:hover i {
+    color: var(--yellow-transparent-color);
+}
+.button-row .nav-button.green:hover {
+    box-shadow: 0 0 calc(var(--button-size) * .2) calc(var(--button-size) * .1) var(--green-color);
+}
+.button-row .nav-button.green:hover i {
+    color: var(--green-transparent-color);
+}
+.button-row .nav-button.light-blue:hover {
+    box-shadow: 0 0 calc(var(--button-size) * .2) calc(var(--button-size) * .1) var(--light-blue-color);
+}
+.button-row .nav-button.light-blue:hover i {
+    color: var(--light-blue-transparent-color);
+}
+.button-row .nav-button.blue:hover {
+    box-shadow: 0 0 calc(var(--button-size) * .2) calc(var(--button-size) * .1) var(--blue-color);
+}
+.button-row .nav-button.blue:hover i {
+    color: var(--blue-transparent-color);
+}
+.button-row .nav-button.purple:hover {
+    box-shadow: 0 0 calc(var(--button-size) * .2) calc(var(--button-size) * .1) var(--purple-color);
+}
+.button-row .nav-button.purple:hover i {
+    color: var(--purple-transparent-color);
+}
+.button-row .nav-button.pink:hover {
+    box-shadow: 0 0 calc(var(--button-size) * .2) calc(var(--button-size) * .1) var(--pink-color);
+}
+.button-row .nav-button.pink:hover i {
+    color: var(--pink-transparent-color);
+}
